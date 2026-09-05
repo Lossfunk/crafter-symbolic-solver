@@ -32,6 +32,7 @@ evidence/benchmarks.json
 evidence/input_boundary_audit.json
 evidence/packaging_equivalence.json
 evidence/policy_provenance.json
+evidence/readme_layout_verification.json
 evidence/release_verification.json
 evidence/repository_verification.json
 evidence/research_inventory.json

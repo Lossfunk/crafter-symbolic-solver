@@ -65,12 +65,18 @@ To make ordinary distributable packages:
 ```bash
 python -m pip install build
 python -m build
+python scripts/verify_repository.py
 ```
 
 This writes the wheel and source distribution under `dist/`. Review their
 contents, install the wheel in a separate environment, and run tests before
 attaching them to a GitHub Release. No PyPI upload is necessary for repository
 users to install with `pip install .`.
+
+Build from a clean checkout or a fresh build directory. Git ignores alone do
+not stop old `.DS_Store` files in a build cache entering a wheel. The verifier
+checks the current version's available wheel, source distribution and source
+ZIP for Finder metadata; package/source rules exclude it too.
 
 ## Version and provenance discipline
 

@@ -1,0 +1,24 @@
+{
+  "version": "2.0.9",
+  "date": "2026-09-06",
+  "kind": "Local rendered README review, not a GitHub-hosted test",
+  "renderer": "Marked GFM and headless Chrome with github-markdown-light.css",
+  "stylesheet_source": "https://github.com/sindresorhus/github-markdown-css",
+  "stylesheet_sha256": "de2d14b5290b8cf2af74c95e92560d9c00642ae72de0b856cece3e4eddb2d885",
+  "readme_sha256": "a68b98e305bd1f64af2c8623a3ea8e92cd90a0a0a31223fd86893718e02281f7",
+  "gallery_image_order": ["easy-diamond.gif", "long-diamond-hunt.gif", "shoreline-death.gif"],
+  "before_at_860px": {
+    "image_display_widths": [158.28125, 256, 222.0625],
+    "cause": "Automatic table-column sizing responds to unequal caption lengths"
+  },
+  "after": [
+    {"viewport_width": 1100, "image_display_sizes": [[256, 306], [256, 306], [256, 306]], "gallery_rows": 1, "document_overflow": false},
+    {"viewport_width": 860, "image_display_sizes": [[256, 306], [256, 306], [256, 306]], "gallery_rows": 1, "document_overflow": false},
+    {"viewport_width": 640, "image_display_sizes": [[256, 306], [256, 306], [256, 306]], "gallery_rows": 2, "document_overflow": false},
+    {"viewport_width": 390, "image_display_sizes": [[256, 306], [256, 306], [256, 306]], "gallery_rows": 3, "document_overflow": false}
+  ],
+  "full_page_and_gallery_images_visually_reviewed": true,
+  "gif_bytes_changed": false,
+  "measured_policy_changed": false,
+  "benchmark_rows_changed": false
+}

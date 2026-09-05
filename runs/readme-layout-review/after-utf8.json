@@ -1,0 +1,182 @@
+[
+  {
+    "width": 1100,
+    "images": [
+      {
+        "src": "docs/assets/easy-diamond.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 92,
+        "y": 440.78125
+      },
+      {
+        "src": "docs/assets/long-diamond-hunt.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 352.1875,
+        "y": 440.78125
+      },
+      {
+        "src": "docs/assets/shoreline-death.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 612.375,
+        "y": 440.78125
+      }
+    ],
+    "overflow": {
+      "viewport": 1100,
+      "document": 1100
+    }
+  },
+  {
+    "width": 860,
+    "images": [
+      {
+        "src": "docs/assets/easy-diamond.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 32,
+        "y": 440.78125
+      },
+      {
+        "src": "docs/assets/long-diamond-hunt.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 292.1875,
+        "y": 440.78125
+      },
+      {
+        "src": "docs/assets/shoreline-death.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 552.375,
+        "y": 440.78125
+      }
+    ],
+    "overflow": {
+      "viewport": 860,
+      "document": 860
+    }
+  },
+  {
+    "width": 640,
+    "images": [
+      {
+        "src": "docs/assets/easy-diamond.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 16,
+        "y": 496.78125
+      },
+      {
+        "src": "docs/assets/long-diamond-hunt.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 276.1875,
+        "y": 496.78125
+      },
+      {
+        "src": "docs/assets/shoreline-death.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 16,
+        "y": 808.78125
+      }
+    ],
+    "overflow": {
+      "viewport": 640,
+      "document": 640
+    }
+  },
+  {
+    "width": 390,
+    "images": [
+      {
+        "src": "docs/assets/easy-diamond.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 16,
+        "y": 664.78125
+      },
+      {
+        "src": "docs/assets/long-diamond-hunt.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 16,
+        "y": 976.78125
+      },
+      {
+        "src": "docs/assets/shoreline-death.gif",
+        "loaded": true,
+        "natural": [
+          256,
+          306
+        ],
+        "width": 256,
+        "height": 306,
+        "x": 16,
+        "y": 1288.78125
+      }
+    ],
+    "overflow": {
+      "viewport": 390,
+      "document": 390
+    }
+  }
+]

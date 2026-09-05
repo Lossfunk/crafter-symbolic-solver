@@ -7,3 +7,4 @@ recursive-include examples *.py
 recursive-include scripts *.py
 include src/crafter_symbolic/_policy/README.md
 recursive-include .github *.yml *.md
+global-exclude .DS_Store ._*

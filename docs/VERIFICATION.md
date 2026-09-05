@@ -1,5 +1,38 @@
 # Release verification
 
+## README flow and gallery layout: 2.0.9
+
+The README now proceeds from purpose and measured results to gameplay,
+installation, comparison caveats and code navigation. It distinguishes action
+counts from the clips' different playback speeds. Scores, GIFs and policy
+rules are unchanged.
+
+Rendered the old and revised README locally with Marked GFM, headless Chrome
+and a [GitHub-style stylesheet](https://github.com/sindresorhus/github-markdown-css).
+At an 860-pixel viewport, the old table displayed the three images at widths
+158.28, 256 and 222.06 pixels despite identical source dimensions. In the new
+image paragraph, all three display at 256×306 at tested viewport widths of
+1100, 860, 640 and 390 pixels. They wrap to two or three rows as needed, with
+no document-level horizontal overflow. Full-page and gallery screenshots were
+visually reviewed, including mobile layout and text encoding. This is a local
+preview, not a claim that a published GitHub page was tested.
+
+[Layout measurements and README hash](../evidence/readme_layout_verification.json)
+record the check. The gallery regression test prevents a return to text-weighted
+table columns and verifies image order, equal canvases and action-count labels.
+All 28 tests pass against the installed 2.0.9 wheel from outside the checkout,
+using the previously validated dependency environment and a separate package
+installation directory. A two-worker 20-action CLI smoke also passes; this is
+not a new benchmark. Agent rules, the cooldown limitation, all 2,192 evidence
+rows and the benchmark headline are unchanged.
+
+Finder metadata is ignored by Git and excluded by package/source rules. An
+initial packaging attempt caught a stale `.DS_Store` in the build cache; that
+cache and attempt were set aside and a clean build passed the archive checks.
+All earlier release wheels were also checked and contain no `.DS_Store`.
+The repository verifier now rejects Finder metadata in current-version wheels,
+source distributions and source ZIPs, with a regression test for nested paths.
+
 ## Final input audit and code guide: 2.0.8
 
 The [input audit](FINAL_INPUT_AUDIT.md) records 6,634 matching offline actions,

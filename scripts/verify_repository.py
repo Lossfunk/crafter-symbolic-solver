@@ -1,10 +1,12 @@
 """Check public docs, license, version agreement and documented CLI options."""
 import ast
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
+import tarfile
 import tomllib
 from urllib.parse import unquote
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED = {'.git', '.venv', '__pycache__', '.pytest_cache', 'build', 'dist', 'runs',
@@ -15,7 +17,7 @@ def source_files():
     return sorted(p for p in ROOT.rglob('*') if p.is_file()
         and not any(x in EXCLUDED or x.endswith('.egg-info') for x in p.relative_to(ROOT).parts)
         and p.name not in {'.DS_Store', '.coverage', 'SOURCE_SHA256SUMS'}
-        and not p.name.startswith('.env'))
+        and not p.name.startswith(('.env', '._')))
 
 
 def headings(path):
@@ -27,6 +29,14 @@ def headings(path):
         slugs.add(base if not count else f'{base}-{count}')
         counts[base] = count+1
     return slugs
+
+
+def assert_no_finder_metadata(names):
+    """Git ignores do not protect a wheel built from a stale build directory."""
+    bad = [name for name in names if any(
+        part == '.DS_Store' or part.startswith('._')
+        for part in PurePosixPath(name).parts)]
+    assert not bad, f'Finder metadata in distribution: {bad}'
 
 
 def main():
@@ -71,8 +81,23 @@ def main():
             if anchor:
                 assert anchor in headings(dest), (path, link)
             checked += 1
+    archives = 0
+    for filename in (f'crafter_symbolic_rgb-{version}-py3-none-any.whl',
+                     f'crafter_symbolic_rgb-{version}.tar.gz',
+                     f'crafter_symbolic_rgb-{version}-source.zip'):
+        path = ROOT/'dist'/filename
+        if not path.exists():
+            continue
+        if filename.endswith('.tar.gz'):
+            with tarfile.open(path) as archive:
+                assert_no_finder_metadata(archive.getnames())
+        else:
+            with zipfile.ZipFile(path) as archive:
+                assert_no_finder_metadata(archive.namelist())
+        archives += 1
     print(f'PASS: version {version}, MIT license, {len(flags)} CLI options, '
-          f'{checked} local links/anchors, {len(files)} source files')
+          f'{checked} local links/anchors, {len(files)} source files; '
+          f'{archives} available distributions free of Finder metadata')
 
 
 if __name__ == '__main__':

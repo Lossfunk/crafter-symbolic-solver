@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.9 — 2026-09-06
+
+- Revise README order and wording from purpose and results through gameplay,
+  installation, comparison caveats and code navigation.
+- Remove the text-weighted gallery table and playback-duration headings.
+  Use equal-size images that wrap on narrow screens; label outcomes in actions.
+- Add a gallery-layout regression test and desktop/mobile rendering checks.
+- Explicitly exclude Finder metadata from packages and check built archives,
+  in addition to the existing Git ignore rule.
+- Keep all GIF bytes, policy rules, audit evidence and benchmark figures unchanged.
+
 ## 2.0.8 — 2026-09-05
 
 - Add a final input audit, replay evidence and runnable audit scripts.

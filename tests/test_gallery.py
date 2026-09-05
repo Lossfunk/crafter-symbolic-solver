@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import re
 import unittest
 
 from PIL import Image
@@ -11,6 +12,23 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class GalleryTests(unittest.TestCase):
+    def test_readme_gallery_uses_one_image_paragraph_not_weighted_columns(self):
+        readme = (ROOT/'README.md').read_text()
+        image_paragraphs = [p for p in readme.split('\n\n') if '![' in p]
+        self.assertEqual(len(image_paragraphs), 1)
+        gallery = image_paragraphs[0]
+        self.assertNotIn('|', gallery)
+        self.assertNotIn('<table', gallery.lower())
+        images = re.findall(r'!\[([^\]]+)\]\(([^)]+)\)', gallery)
+        self.assertEqual([target for _, target in images], [
+            'docs/assets/easy-diamond.gif',
+            'docs/assets/long-diamond-hunt.gif',
+            'docs/assets/shoreline-death.gif'])
+        for (alt, target), step in zip(images, (67, 1862, 489)):
+            self.assertIn(f'action {step}', alt)
+            with Image.open(ROOT/target) as image:
+                self.assertEqual(image.size, (256, 306))
+
     def test_assets_match_metadata(self):
         for name in ('easy-diamond', 'long-diamond-hunt', 'shoreline-death'):
             with self.subTest(clip=name):

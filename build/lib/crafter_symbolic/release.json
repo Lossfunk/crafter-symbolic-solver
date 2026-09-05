@@ -1,5 +1,5 @@
 {
-  "version": "2.0.8",
+  "version": "2.0.9",
   "default_variant": "pocket",
   "factory": "ExpeditionAgent(pocket=True)",
   "comparison_variant": "combined",
@@ -9,7 +9,7 @@
   "maximum_episode_actions": 10000,
   "global_state_access": false,
   "neural_network": false,
-  "packaging": "2.0.0 policy unchanged. Later updates add the viewer, MIT license and documentation. 2.0.8 adds an input audit, an assumption counterexample and a code map.",
+  "packaging": "2.0.0 policy unchanged. Later updates add the viewer, MIT license and documentation. 2.0.9 revises README flow and uses equal-size wrapping gameplay images; recordings and measured policy are unchanged.",
   "measured_policy_score": 69.98498715811488,
   "measured_policy_diamonds": 213,
   "measured_policy_episodes": 384,

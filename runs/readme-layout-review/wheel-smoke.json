@@ -1,0 +1,123 @@
+{
+  "package_version": "2.0.9",
+  "environment": "stock crafter.Env 1.8.3",
+  "display": {
+    "show": false,
+    "fps": 10,
+    "scale": 8
+  },
+  "observation_contract": "exact returned RGB and previous reward only",
+  "variant": "pocket",
+  "length": 20,
+  "benchmark_horizon": false,
+  "dependencies": {
+    "crafter": "1.8.3",
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0",
+    "imageio": "2.37.4",
+    "opensimplex": "0.4.5.1",
+    "ruamel.yaml": "0.19.1"
+  },
+  "summary": {
+    "episodes": 2,
+    "crafter_score": 0.47476337361265225,
+    "diamond_successes": 0,
+    "diamond_percent": 0.0,
+    "achievement_episode_counts": {
+      "collect_coal": 0,
+      "collect_diamond": 0,
+      "collect_drink": 0,
+      "collect_iron": 0,
+      "collect_sapling": 0,
+      "collect_stone": 0,
+      "collect_wood": 2,
+      "defeat_skeleton": 0,
+      "defeat_zombie": 0,
+      "eat_cow": 0,
+      "eat_plant": 0,
+      "make_iron_pickaxe": 0,
+      "make_iron_sword": 0,
+      "make_stone_pickaxe": 0,
+      "make_stone_sword": 0,
+      "make_wood_pickaxe": 0,
+      "make_wood_sword": 0,
+      "place_furnace": 0,
+      "place_plant": 0,
+      "place_stone": 0,
+      "place_table": 1,
+      "wake_up": 0
+    },
+    "achievement_percent": {
+      "collect_coal": 0.0,
+      "collect_diamond": 0.0,
+      "collect_drink": 0.0,
+      "collect_iron": 0.0,
+      "collect_sapling": 0.0,
+      "collect_stone": 0.0,
+      "collect_wood": 100.0,
+      "defeat_skeleton": 0.0,
+      "defeat_zombie": 0.0,
+      "eat_cow": 0.0,
+      "eat_plant": 0.0,
+      "make_iron_pickaxe": 0.0,
+      "make_iron_sword": 0.0,
+      "make_stone_pickaxe": 0.0,
+      "make_stone_sword": 0.0,
+      "make_wood_pickaxe": 0.0,
+      "make_wood_sword": 0.0,
+      "place_furnace": 0.0,
+      "place_plant": 0.0,
+      "place_stone": 0.0,
+      "place_table": 50.0,
+      "wake_up": 0.0
+    },
+    "mean_episode_steps": 20,
+    "first_diamond_steps_among_successes": {
+      "min": null,
+      "median": null,
+      "max": null
+    },
+    "unconditional_diamond_percent_by_step": {
+      "100": 0.0,
+      "200": 0.0,
+      "400": 0.0,
+      "800": 0.0,
+      "1600": 0.0,
+      "3200": 0.0,
+      "6400": 0.0,
+      "10000": 0.0
+    }
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "seed": 0,
+      "variant": "pocket",
+      "steps": 20,
+      "first_diamond_step": null,
+      "achievements": {
+        "collect_wood": 5
+      },
+      "terminal": "horizon",
+      "action_sha256": "acf34e8b5b426f6a384a9d7c74692885ae782d01815c9985d98e9400f67d7257",
+      "recording": null,
+      "wall_time_seconds": 0.060546000007889234
+    },
+    {
+      "episode": 1,
+      "seed": 1,
+      "variant": "pocket",
+      "steps": 20,
+      "first_diamond_step": null,
+      "achievements": {
+        "collect_wood": 5,
+        "place_table": 1
+      },
+      "terminal": "horizon",
+      "action_sha256": "039e161b2a7d9c39931d690801bab15ef6e85ff5e967f41920681ab14ef6707c",
+      "recording": null,
+      "wall_time_seconds": 0.05813408399990294
+    }
+  ],
+  "wall_time_seconds": 0.5380737090017647
+}

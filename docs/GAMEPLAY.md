@@ -37,6 +37,12 @@ GIF palette conversion is the only color conversion. Labels are outside the
 game image and are not inputs to the agent. No extra `env.render()` call is
 made, since that can change Crafter's random state.
 
+All three GIF canvases are 256×306 pixels: a 256×256 game image plus labels.
+The README puts them in one image paragraph, so they keep the same display
+size and wrap onto new rows on narrower screens. A table with unequal caption
+lengths previously shrank the images by different amounts. Playback duration
+is a presentation choice, not time taken by the agent; compare action counts.
+
 The quick run shows every action at 3 actions/sec. The long hunt is a timelapse
 at 48 actions/sec, displaying every fourth action; its final 40 actions are
 shown individually at 3 actions/sec. The failed game shows every action at

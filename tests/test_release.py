@@ -23,6 +23,18 @@ from crafter_symbolic.viewer import FrameViewer
 
 
 class ReleaseTests(unittest.TestCase):
+    def test_archive_check_rejects_nested_finder_metadata(self):
+        root = Path(__file__).resolve().parents[1]
+        spec = importlib.util.spec_from_file_location('verify_repository', root/'scripts/verify_repository.py')
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        module.assert_no_finder_metadata(['package/agent.py', 'docs/README.md'])
+        for name in ('.DS_Store', 'docs/assets/.DS_Store', 'package/._agent.py'):
+            with self.subTest(path=name), self.assertRaises(AssertionError):
+                module.assert_no_finder_metadata([name])
+        self.assertIn('.DS_Store', (root/'.gitignore').read_text().splitlines())
+        self.assertIn('global-exclude .DS_Store ._*', (root/'MANIFEST.in').read_text())
+
     def test_public_action_is_int_and_reset_is_fresh(self):
         rgb = crafter.Env(seed=71).reset()
         for variant in ('pocket', 'combined'):
