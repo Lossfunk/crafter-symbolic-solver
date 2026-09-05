@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "crafter-symbolic-rgb"
-version = "2.0.5"
+version = "2.0.8"
 description = "Observation-faithful, diamond-first symbolic agent for stock Crafter"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -33,3 +33,4 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 crafter_symbolic = ["release.json"]
+"crafter_symbolic._policy" = ["README.md"]

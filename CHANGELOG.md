@@ -1,10 +1,29 @@
 # Changelog
 
-## Unreleased
+## 2.0.8 — 2026-09-05
+
+- Add a final input audit, replay evidence and runnable audit scripts.
+- Document a reproduced zombie-cooldown attribution error; do not change it
+  or claim that the policy is free of behavioral bugs.
+- Add a file/method code map and notes beside the frozen policy modules.
+- Keep measured policy Python files, the public wrapper and benchmark rows
+  unchanged. Add regression checks for the audit evidence and counterexample.
+
+## 2.0.7 — 2026-09-05
+
+- Give each README GIF its own pace, with actions/sec displayed above it.
+- Slow diamond collection and the final fight to 3 actions/sec.
+- Show the entire failed game. All three GIFs stay under a minute.
+- Reuse the same recordings; no agent changes or new benchmark runs.
+
+## 2.0.6 — 2026-09-05
 
 - Credit GPT 5.6 Sol and GPT 6 Astra (xhigh), used in Codex during development
   and iteration. Neither model is used during gameplay.
-- README-only change; the 2.0.5 archives and source snapshot are unchanged.
+- Add three inline gameplay GIFs: a quick diamond, a difficult successful
+  diamond hunt and a fatal shoreline fight. Include recording scripts and
+  clip metadata. The agent and benchmark results are unchanged.
+- Preserve previous archives and include the clips in the new source release.
 
 ## 2.0.5 — 2026-09-05
 

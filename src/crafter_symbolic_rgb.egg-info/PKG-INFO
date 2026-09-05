@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: crafter-symbolic-rgb
-Version: 2.0.5
+Version: 2.0.8
 Summary: Observation-faithful, diamond-first symbolic agent for stock Crafter
 License-Expression: MIT
 Keywords: crafter,symbolic-agent,planning,benchmark,rgb
@@ -30,9 +30,23 @@ and how high its Crafter score could go. We improved the rules by checking
 failed runs and testing changes on new games. Getting diamonds reliably
 mattered more than getting them quickly.
 
+We used GPT 5.6 Sol and GPT 6 Astra (xhigh) in Codex to develop and iterate
+on the agent. The agent makes no model calls when it plays.
+
 The released `pocket` agent got diamonds in 213 of 384 new games (55.47%),
 with a Crafter Score of 69.98. Every game in that batch ended in death before
 the step limit.
+
+## Gameplay
+
+| Quick diamond · 25s | Hard-earned diamond · 54s | A fatal shoreline fight · 59s |
+|---|---|---|
+| ![Diamond collected at action 67](docs/assets/easy-diamond.gif) | ![A long hunt ending in diamond at action 1862](docs/assets/long-diamond-hunt.gif) | ![The agent dies fighting along a narrow shoreline](docs/assets/shoreline-death.gif) |
+| Diamond in 67 actions. | Diamond in 1,862 actions, after mining 87 stone, eating 9 cows and waking 17 times. | The full 489-action game, ending in a shoreline fight. |
+
+Selected examples of the unchanged agent. Each shows its playback rate;
+diamond collection and the final fight play at 3 actions/sec.
+[Seeds, recording details and how to make these GIFs](docs/GAMEPLAY.md).
 
 ## Run it
 
@@ -87,11 +101,11 @@ comes from these differences or from better policies.
 - [Agent API](src/crafter_symbolic/agent.py): `Agent.act(rgb, reward)` returns
   an action from 0 to 16 and keeps memory within each game.
 - [Controller and RGB decoder](src/crafter_symbolic/_policy/) ·
-  [How they work](docs/ARCHITECTURE.md).
+  [Code map](docs/CODE_MAP.md) · [How they work](docs/ARCHITECTURE.md).
 - [Game runner](src/crafter_symbolic/cli.py) ·
   [Viewer](src/crafter_symbolic/viewer.py) · [Score calculation](src/crafter_symbolic/metrics.py).
 - [Results and uncertainty](docs/BENCHMARKS.md) ·
-  [Experiments and mistakes](docs/AUDIT.md).
+  [Experiments and mistakes](docs/AUDIT.md) · [Final input audit](docs/FINAL_INPUT_AUDIT.md).
 - [Tests](tests/) · [Checks we've run](docs/VERIFICATION.md) ·
   [Contributing](CONTRIBUTING.md) · [Pushing to GitHub](docs/PUBLISHING.md).
 

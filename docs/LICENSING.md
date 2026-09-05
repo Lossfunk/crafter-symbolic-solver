@@ -10,6 +10,8 @@ assets are provided by Danijar Hafner's project under its
 Pillow, imageio, opensimplex and ruamel.yaml retain their respective licenses.
 The optional Pygame viewer dependency retains its own LGPL license and is
 installed separately, not vendored into this package.
+The README's gameplay GIFs contain Crafter artwork; its
+[copyright and permission notice](assets/CRAFTER_LICENSE.md) accompanies them.
 No paper PDF, human gameplay archive, neural weights, credentials, or private
 machine paths are included in this repository-style folder.
 

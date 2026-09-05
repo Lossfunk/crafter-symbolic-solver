@@ -1,5 +1,43 @@
 # Release verification
 
+## Final input audit and code guide: 2.0.8
+
+The [input audit](FINAL_INPUT_AUDIT.md) records 6,634 matching offline actions,
+another 6,634 after full-episode resets, and 4,444 matching combined/pocket
+pre-diamond actions. No live Crafter environment was imported during replay.
+A stock-object fixture reproduces one overconfident cooldown inference.
+This is a documented policy limitation, not a fixed bug or new benchmark.
+
+All 26 tests pass against the installed wheel outside the source checkout.
+All 2,192 portable rows match the original result files; both complete pocket
+cohorts' archived source hashes were checked. The normal evidence verifier
+passes, as do 109 local documentation links. Policy Python files, the public
+wrapper, runner, viewer and metrics are unchanged. New guides link the README
+to the relevant files and methods, and explain legacy comments beside the
+frozen source. No broad refactor or policy optimization was performed.
+
+## Gameplay pacing update: 2.0.7
+
+Reused the same recordings. The clips now last 25.2, 54.4 and 58.9 seconds,
+with rates shown above the game and endings at 3 actions/sec. The failure GIF
+contains every frame from reset through death. Updated first/last-frame proof
+sheets were visually checked. All 23 installed-wheel tests pass, including
+frame timing, rate changes, hashes and full-failure coverage. The benchmark
+rows and frozen policy hashes still verify; no new episodes were run.
+
+## Gameplay gallery update: 2.0.6
+
+Three README clips were selected from six complete recordings of the unchanged
+2.0.5 agent. Two collected diamond. These recordings are kept separate from
+benchmark data. The clips and contact sheets were visually checked, including
+the diamond inventory and terminal zero-health frame. Clip hashes, dimensions,
+frame counts and playback durations pass automated checks.
+
+All 22 tests passed against the installed 2.0.6 wheel outside the source tree.
+The 2,192 benchmark rows, frozen policy hashes and 67 local links verify.
+The source release includes the GIFs, metadata, recording scripts and Crafter's
+artwork license notice. The wheel remains small and does not bundle the GIFs.
+
 ## README wording update: 2.0.5
 
 The README uses plainer language. Commands, scores and comparison caveats are

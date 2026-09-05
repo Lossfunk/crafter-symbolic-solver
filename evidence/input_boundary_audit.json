@@ -1,0 +1,203 @@
+{
+  "kind": "OFFLINE_BOUNDARY_AUDIT_NOT_BENCHMARK",
+  "sources": [
+    {
+      "file": "agent.py",
+      "sha256": "41bc8eca0df2c75ce7fb14053a566a82041e051d349888ac1e7f8f12c1fca9e0"
+    },
+    {
+      "file": "__init__.py",
+      "sha256": "3e8ddd1878b24df90611a93360a7a122f85bbd951c03ef06f5fd93479fd3a0ef"
+    },
+    {
+      "file": "config.py",
+      "sha256": "9d2b9fc371b52a18562868c7cfe5a8335d9447361741021f781a5897f687abe0"
+    },
+    {
+      "file": "corrected_symbolic_agent.py",
+      "sha256": "252113285b1c38896cda8c6938f8926c2f3dc50eb705219a83f59780bedb37b1"
+    },
+    {
+      "file": "crafter_rgb_decoder.py",
+      "sha256": "3da8fa4ffa5a1a3860245140fdba2d537d0392b05b14d85557ab30671016a37f"
+    },
+    {
+      "file": "heuristic_agent.py",
+      "sha256": "72071d9a3439fc1e682ae3d6e8f65d54d76888c4a1f2880c9803a02cb7548a26"
+    },
+    {
+      "file": "local_combat_pilot.py",
+      "sha256": "77328db1007e93420bdb3cec9efb64ce060fb5e3d663486bc4a69f5e9b5e18d2"
+    },
+    {
+      "file": "score_agent.py",
+      "sha256": "2e073d29e84501f759d1a128a88f3d8908c608c39f70411eba7c0efdb301ef4b"
+    },
+    {
+      "file": "symbolic_expedition_agent.py",
+      "sha256": "803b801ba12271d21971a161cb037b3a8b8ecedc3f20883f308260733c0198f3"
+    },
+    {
+      "file": "symbolic_opportunity_agent.py",
+      "sha256": "0e83d8150c711bf1856155c4a15dde7769d95ccc7b15ffba3284b3d5226e6fd7"
+    },
+    {
+      "file": "visual_symbolic_observation.py",
+      "sha256": "2e3675d29369ad2cc88a9c73006376ba2bc9d367d0122e9da7af56598b39db9e"
+    }
+  ],
+  "records": [
+    {
+      "recording": "205000002.npz",
+      "actions": 489,
+      "action_matches": 489,
+      "reset_action_matches": 489,
+      "combined_prefix_matches": 489,
+      "zero_and_varied_rewards": true,
+      "crafter_imported": false,
+      "public_asset_reads_after_guard": 0,
+      "action_sha256": "8cc2e879d95161b736c45d97a1b695162c8d3231b203c2e4d5ec6bfcd7eb6235",
+      "flags": {
+        "pocket_enabled": true,
+        "provision_enabled": false,
+        "excursions_enabled": false,
+        "tour_enabled": false,
+        "food_distance": 6,
+        "forge_return_enabled": true,
+        "combat_enabled": true
+      }
+    },
+    {
+      "recording": "205000041.npz",
+      "actions": 219,
+      "action_matches": 219,
+      "reset_action_matches": 219,
+      "combined_prefix_matches": 219,
+      "zero_and_varied_rewards": true,
+      "crafter_imported": false,
+      "public_asset_reads_after_guard": 0,
+      "action_sha256": "aa3c417923640450471ac4c4eb49b8103b6ede5b9be15fbca491136d4efef5e1",
+      "flags": {
+        "pocket_enabled": true,
+        "provision_enabled": false,
+        "excursions_enabled": false,
+        "tour_enabled": false,
+        "food_distance": 6,
+        "forge_return_enabled": true,
+        "combat_enabled": true
+      }
+    },
+    {
+      "recording": "205000123.npz",
+      "actions": 3212,
+      "action_matches": 3212,
+      "reset_action_matches": 3212,
+      "combined_prefix_matches": 1862,
+      "zero_and_varied_rewards": true,
+      "crafter_imported": false,
+      "public_asset_reads_after_guard": 0,
+      "action_sha256": "91b2faf9b1dca7ba990af124c65770d4a23bcae1910e596a2cda1e48156fc095",
+      "flags": {
+        "pocket_enabled": true,
+        "provision_enabled": false,
+        "excursions_enabled": false,
+        "tour_enabled": false,
+        "food_distance": 6,
+        "forge_return_enabled": true,
+        "combat_enabled": true
+      }
+    },
+    {
+      "recording": "205000138.npz",
+      "actions": 907,
+      "action_matches": 907,
+      "reset_action_matches": 907,
+      "combined_prefix_matches": 67,
+      "zero_and_varied_rewards": true,
+      "crafter_imported": false,
+      "public_asset_reads_after_guard": 0,
+      "action_sha256": "d87d90e630e16d13dc029ef5f94800f6bca3677d95177968afbe73b69fba0fa7",
+      "flags": {
+        "pocket_enabled": true,
+        "provision_enabled": false,
+        "excursions_enabled": false,
+        "tour_enabled": false,
+        "food_distance": 6,
+        "forge_return_enabled": true,
+        "combat_enabled": true
+      }
+    },
+    {
+      "recording": "205000234.npz",
+      "actions": 1247,
+      "action_matches": 1247,
+      "reset_action_matches": 1247,
+      "combined_prefix_matches": 1247,
+      "zero_and_varied_rewards": true,
+      "crafter_imported": false,
+      "public_asset_reads_after_guard": 0,
+      "action_sha256": "a31f228e71ea0e4c69081308d159c9c2120ce9baed6ddab2bbc35b0f3f3bc2ed",
+      "flags": {
+        "pocket_enabled": true,
+        "provision_enabled": false,
+        "excursions_enabled": false,
+        "tour_enabled": false,
+        "food_distance": 6,
+        "forge_return_enabled": true,
+        "combat_enabled": true
+      }
+    },
+    {
+      "recording": "206000047.npz",
+      "actions": 560,
+      "action_matches": 560,
+      "reset_action_matches": 560,
+      "combined_prefix_matches": 560,
+      "zero_and_varied_rewards": true,
+      "crafter_imported": false,
+      "public_asset_reads_after_guard": 0,
+      "action_sha256": "decc10f82c414d10f0ada658af99c6867e4260c2903c9fc501e89d9509108d01",
+      "flags": {
+        "pocket_enabled": true,
+        "provision_enabled": false,
+        "excursions_enabled": false,
+        "tour_enabled": false,
+        "food_distance": 6,
+        "forge_return_enabled": true,
+        "combat_enabled": true
+      }
+    }
+  ],
+  "actions_replayed": 6634,
+  "reset_actions_replayed": 6634,
+  "combined_prefix_actions": 4444,
+  "guard_scope": "Python audit hook, no live environment import; not a hostile-code sandbox",
+  "audited_package_version": "2.0.7",
+  "policy_changed": false,
+  "benchmark_records_checked": 2192,
+  "default_policy_benchmark": {
+    "episodes": 384,
+    "diamonds": 213,
+    "crafter_score": 69.98498715811488,
+    "complete_consecutive_seed_batches": [
+      {
+        "base_seed": 205000000,
+        "episodes": 256
+      },
+      {
+        "base_seed": 206000000,
+        "episodes": 128
+      }
+    ]
+  },
+  "assumption_counterexample": {
+    "kind": "DIAGNOSTIC_COUNTEREXAMPLE_NOT_BENCHMARK",
+    "health_before": 9,
+    "health_after": 7,
+    "surviving_zombie_true_cooldown": 1,
+    "surviving_zombie_inferred_cooldown": 5,
+    "cause": "The killed zombie's final attack is attributed to the surviving adjacent zombie.",
+    "classification": "Overconfident belief inference, not hidden-state access",
+    "policy_modified": false
+  }
+}

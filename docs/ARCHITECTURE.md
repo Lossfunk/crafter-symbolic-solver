@@ -2,6 +2,10 @@
 
 ## One controller, not an episode oracle
 
+For file and method navigation, see the [code map](CODE_MAP.md). For the latest
+input checks and an identified cooldown-inference error, see the
+[final input audit](FINAL_INPUT_AUDIT.md).
+
 `Agent()` contains one fixed `ExpeditionAgent(pocket=True)` instance. The name
 reflects its research lineage, not an ensemble. No seed, completed outcome,
 privileged world feature, network, or external planner selects its behavior.
@@ -74,11 +78,13 @@ produce different diamond counts even with identical pre-diamond policy law.
 
 ## Memory
 
-All state resets per episode: relative material map; visit counts; recognized
+Episode-specific state resets: relative material map; visit counts; recognized
 and recently seen objects; oriented arrows; inferred enemy damage/cooldowns;
 forge, water, ore, diamond and shelter landmarks; route/goal stages; necessity
 clocks; pick/diamond timestamps; recent positions; plant and weapon task state.
 There is no cross-episode learning or seed-conditioned memory.
+The decoder retains reusable public-template caches, not observations from
+previous games.
 
 The scheduler's cost/runway estimates are heuristics. For example the inherited
 19-value sword admission calculation is a sum-of-distances proxy, not a strict

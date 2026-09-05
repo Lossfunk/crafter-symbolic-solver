@@ -3,6 +3,10 @@
 Final consolidation: 2026-09-05. Research and training are stopped. This
 document supersedes older champion labels; it does not rewrite their artifacts.
 
+Later input audit: [offline replay and assumption review](FINAL_INPUT_AUDIT.md)
+reproduced complete action streams without a live environment and documented
+a concrete cooldown-attribution error. It does not change the measured policy.
+
 Packaging addendum: 2.0.1 adds user-requested, optional live viewing and GIF
 playback-speed control. It does not alter any policy source or benchmark result.
 See [viewer verification](VERIFICATION.md).
