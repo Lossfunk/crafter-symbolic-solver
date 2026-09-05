@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-05",
+  "scope": "Packaging verification, not optimization or a new benchmark",
+  "platform": "macOS arm64, Python 3.11",
+  "research_regression_tests_passed": 136,
+  "standalone_tests_passed": 15,
+  "final_installed_wheel_tests_passed": 15,
+  "fresh_isolated_install": true,
+  "final_wheel_imported_outside_lab": true,
+  "dependency_check": "No broken requirements found",
+  "research_vs_fresh_crafter_identical_source_data_asset_files": 67,
+  "frozen_policy_modules_ast_equivalent": 8,
+  "retained_lab_source_hashes_verified": 18,
+  "full_episode_equivalence_checks": 6,
+  "matching_actions_in_full_episode_checks": 3870,
+  "portable_completed_benchmark_rows_recomputed": 2192,
+  "multiprocessing_smoke": {"workers": 2, "episodes": 2, "horizon": 20},
+  "remote_ci": "Configured, not executed",
+  "original_project_license": "Owner choice pending",
+  "published_remotely": false,
+  "ann_and_improvement_runs_restarted": false
+}

@@ -1,0 +1,2 @@
+[console_scripts]
+crafter-symbolic = crafter_symbolic.cli:main

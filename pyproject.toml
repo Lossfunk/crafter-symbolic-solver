@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crafter-symbolic-rgb"
+version = "2.0.5"
+description = "Observation-faithful, diamond-first symbolic agent for stock Crafter"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["crafter", "symbolic-agent", "planning", "benchmark", "rgb"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "crafter==1.8.3",
+  "numpy>=1.24,<3",
+  "Pillow>=9.1,<13",
+]
+
+[project.scripts]
+crafter-symbolic = "crafter_symbolic.cli:main"
+
+[project.optional-dependencies]
+viewer = ["pygame==2.6.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+crafter_symbolic = ["release.json"]

@@ -1,0 +1,86 @@
+# Crafter Symbolic
+
+A Python agent for [Crafter](https://github.com/danijar/crafter). It follows
+hand-written rules to collect diamonds and complete other achievements.
+Runs on CPU; no neural network or online service.
+
+## Why we made it
+
+We wanted to see how often an agent could get a diamond within 10,000 steps,
+and how high its Crafter score could go. We improved the rules by checking
+failed runs and testing changes on new games. Getting diamonds reliably
+mattered more than getting them quickly.
+
+We used GPT 5.6 Sol and GPT 6 Astra (xhigh) in Codex to develop and iterate
+on the agent. The agent makes no model calls when it plays.
+
+The released `pocket` agent got diamonds in 213 of 384 new games (55.47%),
+with a Crafter Score of 69.98. Every game in that batch ended in death before
+the step limit.
+
+## Run it
+
+From this folder, using Python 3.11:
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install ".[viewer]"  # Installs Crafter too.
+
+crafter-symbolic --show --seed 0  # Watch; Space pauses, Escape stops.
+crafter-symbolic --seed 0         # Run without a window.
+crafter-symbolic --seed 0 --record-dir runs/demo  # Save a GIF.
+crafter-symbolic --episodes 100 --workers 4 --seed 1000 --output runs/batch.json
+```
+
+The batch command saves all 22 achievement rates, scores and diamond timing.
+Runs end at death or 10,000 actions, even if diamond was collected earlier.
+Use new output paths; existing files are protected. Windows and GIFs are opt-in.
+Omit `[viewer]` when installing if you don't need a window.
+
+[All options and troubleshooting](docs/USAGE.md) ·
+[Python example](examples/play.py)
+
+## Results from other work
+
+We include any training length. The papers use different inputs and test
+procedures, so we make no claim of state-of-the-art performance.
+References checked on 2026-09-05:
+
+| Agent | Crafter Score | Diamond success | Game and input |
+|---|---:|---:|---|
+| This repo: `pocket` | 69.98 | 55.47% | Stock Crafter, 64×64 RGB |
+| [Human experts](https://arxiv.org/abs/2109.06780v2) | 50.5 ± 6.8 | 12% | Original Crafter |
+| [EMERALD](https://proceedings.mlr.press/v267/burchi25a.html) | 58.1 | 0.5% | Crafter, 64×64 RGB |
+| [C-VPT (large)](https://arxiv.org/html/2508.13530v1) | 61.4 ± 4.7 | ≈13%* | Reported Crafter protocol, 144×144 RGB |
+
+*C-VPT's diamond rate is estimated from Figure 11. Its paper states the standard
+Crafter protocol; we haven't reproduced its evaluation. The other rows use
+10,000-step limits. The human paper averages scores across groups of games;
+pooling all 100 games gives 52.05.
+
+In Craftax-Classic, a separate implementation, CrafterDojo's expert reports
+97.5 Score and 71% diamond success; SCALAR reports 88.2% diamond success.
+Both use 10,000-step limits but receive game facts directly; ours reads pixels.
+SCALAR also guarantees a diamond per map. We don't know how much of the gap
+comes from these differences or from better policies.
+[Details and sources](docs/LITERATURE_COMPARISON.md).
+
+## Code and docs
+
+- [Agent API](src/crafter_symbolic/agent.py): `Agent.act(rgb, reward)` returns
+  an action from 0 to 16 and keeps memory within each game.
+- [Controller and RGB decoder](src/crafter_symbolic/_policy/) ·
+  [How they work](docs/ARCHITECTURE.md).
+- [Game runner](src/crafter_symbolic/cli.py) ·
+  [Viewer](src/crafter_symbolic/viewer.py) · [Score calculation](src/crafter_symbolic/metrics.py).
+- [Results and uncertainty](docs/BENCHMARKS.md) ·
+  [Experiments and mistakes](docs/AUDIT.md).
+- [Tests](tests/) · [Checks we've run](docs/VERIFICATION.md) ·
+  [Contributing](CONTRIBUTING.md) · [Pushing to GitHub](docs/PUBLISHING.md).
+
+The agent gets the returned RGB image and previous reward. It has no global map
+or hidden nighttime labels. Its rules use the game's public textures and
+mechanics. The unfinished neural-agent work is not included.
+
+[MIT license](LICENSE) · [Changelog](CHANGELOG.md)

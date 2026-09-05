@@ -1,0 +1,64 @@
+{
+  "kind": "FROZEN_POLICY_NAMESPACE_TRANSPLANT",
+  "factory": "ExpeditionAgent(pocket=True)",
+  "lab_reference": "results/bank_pocket_pre_stock.freeze.json",
+  "modules": {
+    "heuristic_agent.py": {
+      "original_sha256": "72071d9a3439fc1e682ae3d6e8f65d54d76888c4a1f2880c9803a02cb7548a26",
+      "packaged_sha256": "72071d9a3439fc1e682ae3d6e8f65d54d76888c4a1f2880c9803a02cb7548a26",
+      "normalized_ast_sha256": "076d7ddb5738a08072b128e45e3cf897141a19f924efc74748e033ce19aa30c4",
+      "only_change": "package-relative imports"
+    },
+    "score_agent.py": {
+      "original_sha256": "fd13b6738119a53150d59867258eaac5520853336dec84329bf78885e9e72df3",
+      "packaged_sha256": "2e073d29e84501f759d1a128a88f3d8908c608c39f70411eba7c0efdb301ef4b",
+      "normalized_ast_sha256": "7bd463d1faca2dab334c0a86eff30137042cfeed05b9a880436b2537237a12e9",
+      "only_change": "package-relative imports"
+    },
+    "crafter_rgb_decoder.py": {
+      "original_sha256": "f6d72c634c9c78bac2d55350342b54f5f3b3b3cba98b5017f08e53d9b0036031",
+      "packaged_sha256": "3da8fa4ffa5a1a3860245140fdba2d537d0392b05b14d85557ab30671016a37f",
+      "normalized_ast_sha256": "b3064de0864a703cbd4df82c31e9c08a33f70bcedcd8cc73a3189e6e40cbb7dc",
+      "only_change": "package-relative imports"
+    },
+    "visual_symbolic_observation.py": {
+      "original_sha256": "2e3675d29369ad2cc88a9c73006376ba2bc9d367d0122e9da7af56598b39db9e",
+      "packaged_sha256": "2e3675d29369ad2cc88a9c73006376ba2bc9d367d0122e9da7af56598b39db9e",
+      "normalized_ast_sha256": "02c2376b892472bcdb5241ef5e5929ce2df5f62561479ccbc623a626045aa01e",
+      "only_change": "package-relative imports"
+    },
+    "corrected_symbolic_agent.py": {
+      "original_sha256": "50e0cbdd6d92c02d0380715bbe77595b104148d6e0f9da1255b2d30360597aab",
+      "packaged_sha256": "252113285b1c38896cda8c6938f8926c2f3dc50eb705219a83f59780bedb37b1",
+      "normalized_ast_sha256": "e3a0df502a30296fcd355a9fa8899be4c5fc92bb1e85b95c1d645933abfd29dc",
+      "only_change": "package-relative imports"
+    },
+    "symbolic_opportunity_agent.py": {
+      "original_sha256": "6ad649cb6afaafee965a9d130605da9ff12daf6fa85728656ba68020e4da00c0",
+      "packaged_sha256": "0e83d8150c711bf1856155c4a15dde7769d95ccc7b15ffba3284b3d5226e6fd7",
+      "normalized_ast_sha256": "1fb5fa7151403c7c23d5fc5442b26e171227a6715528a3e31198cdeddb73807e",
+      "only_change": "package-relative imports"
+    },
+    "local_combat_pilot.py": {
+      "original_sha256": "615d3a2cb3e9923d7c4dfa1b0c8101e62973d080aaf3e0657cb265190433d9bb",
+      "packaged_sha256": "77328db1007e93420bdb3cec9efb64ce060fb5e3d663486bc4a69f5e9b5e18d2",
+      "normalized_ast_sha256": "acf92316496b3bb1b63e5e4dbb28dbb3ac253d23d2a8aeb0bf89ae9481ce885f",
+      "only_change": "package-relative imports"
+    },
+    "symbolic_expedition_agent.py": {
+      "original_sha256": "6fcf4d7027fa3713bcfef83d98924719d9ab1ce70af024e1862ac2fb0868335b",
+      "packaged_sha256": "803b801ba12271d21971a161cb037b3a8b8ecedc3f20883f308260733c0198f3",
+      "normalized_ast_sha256": "5680bae9cfa45ef140bec6693425a83830b483df00bb0042c097dd56db410b95",
+      "only_change": "package-relative imports"
+    }
+  },
+  "config": {
+    "source": "crafter_symbolic_agent.py",
+    "source_sha256": "42e12d594f3fb269c00a3c176dd502cf24e8f97eccc0e62787acf42108186639",
+    "packaged_sha256": "9d2b9fc371b52a18562868c7cfe5a8335d9447361741021f781a5897f687abe0",
+    "extracted_verbatim": [
+      "ACTION_NAMES",
+      "FINAL_CONFIG"
+    ]
+  }
+}

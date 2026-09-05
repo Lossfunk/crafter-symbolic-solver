@@ -1,0 +1,17 @@
+{
+  "version": "2.0.2",
+  "date": "2026-09-05",
+  "scope": "Public repository documentation, scaffolding and owner-approved MIT licensing",
+  "policy_changed": false,
+  "installed_wheel_tests_passed": 20,
+  "wheel_license_file_and_spdx_metadata": "MIT verified",
+  "documented_cli_options": 10,
+  "local_documentation_links_and_anchors": "verified",
+  "portable_benchmark_rows_recomputed": 2192,
+  "frozen_policy_hashes": "unchanged",
+  "installed_two_worker_smoke_outside_source": "passed",
+  "public_package_index_upload": false,
+  "github_remote_created_or_pushed": false,
+  "github_ci": "configured; not yet run remotely",
+  "new_benchmark_or_training_run": false
+}

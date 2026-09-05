@@ -1,0 +1,63 @@
+{
+  "kind": "PACKAGING_EQUIVALENCE_NOT_NEW_BENCHMARK",
+  "checks": [
+    {
+      "variant": "pocket",
+      "seed": 199000003,
+      "steps": 341,
+      "complete_action_equivalence": true,
+      "action_sha256": "fa1ee3e8812030d59b9a8568c53bcd06fb2ad07fc54745af2fb1bd626b3d74b5",
+      "diamond": false,
+      "terminal": "dead"
+    },
+    {
+      "variant": "pocket",
+      "seed": 199000019,
+      "steps": 308,
+      "complete_action_equivalence": true,
+      "action_sha256": "b25582722f539d5ea2dd4b96854b63d7700ed2d39f497d1c5fd241a8b6b3efbe",
+      "diamond": true,
+      "terminal": "dead"
+    },
+    {
+      "variant": "pocket",
+      "seed": 1,
+      "steps": 903,
+      "complete_action_equivalence": true,
+      "action_sha256": "f63af47937b3a6d93a27e00d83b6347983571f68f097491877b7a55a596e9823",
+      "diamond": true,
+      "terminal": "dead"
+    },
+    {
+      "variant": "pocket",
+      "seed": 0,
+      "steps": 767,
+      "complete_action_equivalence": true,
+      "action_sha256": "c53dc241dfb7c96d787cce4bce3cc8f84aec720fc50121fad339026f77e0b8c1",
+      "diamond": false,
+      "terminal": "dead"
+    },
+    {
+      "variant": "combined",
+      "seed": 0,
+      "steps": 612,
+      "complete_action_equivalence": true,
+      "action_sha256": "ee69b1f84cfe8f975aa585e7dc565b256b0444e9b3906cbb4ee2842d06daa976",
+      "diamond": false,
+      "terminal": "dead"
+    },
+    {
+      "variant": "combined",
+      "seed": 199000003,
+      "steps": 939,
+      "complete_action_equivalence": true,
+      "action_sha256": "3d2415a7f95a7ec04dfff3c09a5ec204f81add421fcf605a1e3f205b3d7cab05",
+      "diamond": true,
+      "terminal": "dead"
+    }
+  ],
+  "total_compared_actions": 3870,
+  "elapsed_seconds": 36.88099725000211,
+  "stock_crafter": true,
+  "exact_same_observations_to_both_controllers": true
+}

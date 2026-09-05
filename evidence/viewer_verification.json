@@ -1,0 +1,21 @@
+{
+  "version": "2.0.1",
+  "date": "2026-09-05",
+  "policy_changed": false,
+  "scope": "Opt-in viewing and GIF playback controls",
+  "optional_dependency": "pygame==2.6.1",
+  "source_tests_passed": 20,
+  "installed_wheel_tests_passed": 20,
+  "pixel_orientation_and_nearest_scaling": "passed",
+  "pause_and_escape": "passed",
+  "viewer_cleanup_on_interruption": "passed",
+  "headless_display_initialization": "none",
+  "installed_show_plus_gif_smoke": "passed with SDL dummy driver, 3 steps",
+  "installed_two_worker_gif_smoke": "passed, two 3-step episodes",
+  "gif_size": [64, 64],
+  "gif_duration_test": "4 returned frames at 20fps: 200ms total",
+  "native_desktop_visual_inspection": "not performed; offscreen SDL drawing and events tested",
+  "policy_hashes_and_portable_benchmarks": "verified unchanged",
+  "old_2_0_0_distributions": "preserved",
+  "new_benchmark_or_training_run": false
+}

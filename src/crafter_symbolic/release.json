@@ -1,0 +1,18 @@
+{
+  "version": "2.0.5",
+  "default_variant": "pocket",
+  "factory": "ExpeditionAgent(pocket=True)",
+  "comparison_variant": "combined",
+  "crafter_version": "1.8.3",
+  "input": "Exact returned uint8 RGB (64,64,3), previous reward, episode-local history",
+  "output": "Integer action in [0,17)",
+  "maximum_episode_actions": 10000,
+  "global_state_access": false,
+  "neural_network": false,
+  "packaging": "2.0.0 policy unchanged. Later updates add the viewer, MIT license and documentation. 2.0.5 rewrites the README in plain language.",
+  "measured_policy_score": 69.98498715811488,
+  "measured_policy_diamonds": 213,
+  "measured_policy_episodes": 384,
+  "evidence_note": "Historical completed fresh stock batches of the frozen source; packaging checks are separate",
+  "optimality_claim": false
+}
