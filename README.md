@@ -96,7 +96,6 @@ performance gap is not established.
   [Contributing](CONTRIBUTING.md) · [Publishing to GitHub](docs/PUBLISHING.md).
 
 GPT 5.6 Sol and GPT 6 Astra (xhigh) in Codex were used to develop and iterate
-on the agent. Neither runs during gameplay. The unfinished neural-agent work
-is not included.
+on the agent. Neither runs during gameplay.
 
 [MIT license](LICENSE) · [Changelog](CHANGELOG.md)
